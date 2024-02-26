@@ -33,41 +33,38 @@ location of scripts: `/usr/share/nmap/scripts/`
 	tcp window: nmap -sW <target>          	           (ACK)
 	tcp custom: nmap --scanflags <flags> <target>      (FLAGS)
 	idle/zombie: nmap -sI <zombie_ip> <target>         ( )
+
+
+
+# **Main Arguments**
+-------------------------------
+
+	Port choosing: -p
+	- We can separate ports by comma, choose interval, -p- for all port
+	scanning or just a single port.
 	
-
-
-# **Firewall Evasion**
----------------------
-######  Spoofing And Decoys
-
-	Spoofed Source IP: nmap -S <spoofed_ip> <machine_ip>
-	Spoofed MAC Address: nmap --spoof-mac <spoofed_mac> <target>
-	Decoy Scan: nmap -D [<decoy_ip_1>...<decoy_ip_N>,<my_ip>] <target>
+	Fast mode: -F
+	- It decreases number of scanned ports from 1000 to 100.
 	
-######  Fragmentation
-
-	Fragment IP data into 8 bytes: -f
-	Fragment IP data into 16 bytes: -ff
-	Change Fragment Value: --mtu <bytes>
-	Packet Length: --data-length
-	Packet Port: -g <port>
+	Top Ports: --top-port <Count>
 	
-
-
-# **Scripts**
-------------
-
-	Scripts: --script=<scripts> 	
-	- Nmap scripts sequence to run
+	Consecutive order: -r
+	- Scan ports in consecutive order.
 	
-	Default: -sC or --script=default 	
-	- run default scripts
+	 Open Ports: --open
 	
-	Script Arguments: --script-args <arguments>
+	Speed: -T<0-5>
+	- T0 being the slowest and T5 the fastest.
 	
+	Network interface: -e wlan0
+	- Choosing network interface.
+	
+	Disable ping scan: -Pn
+	- Disabling ping scan.
 
 
-# **Detection**
+
+ # **Detection**
 -----------------
 
 	OS: -O 	
@@ -116,34 +113,36 @@ location of scripts: `/usr/share/nmap/scripts/`
 	
 	Delay: --scan-delay <time>:
 	- Delay between packets in miliseconds.
-	
 
 
-# **Additional Options**
--------------------------------
 
-	Port choosing: -p
-	- We can separate ports by comma, choose interval, -p- for all port
-	scanning or just a single port.
+# **Firewall Evasion**
+---------------------
 	
-	Fast mode: -F
-	- It decreases number of scanned ports from 1000 to 100.
+	Fragment IP data into 8 bytes: -f
+	Fragment IP data into 16 bytes: -ff
+	Change Fragment Value: --mtu <bytes>
+	Packet Length: --data-length
+	Packet Port: -g <port>
+
+ # **Spoofing And Decoys**
+
+	Spoofed Source IP: nmap -S <spoofed_ip> <machine_ip>
+	Spoofed MAC Address: nmap --spoof-mac <spoofed_mac> <target>
+	Decoy Scan: nmap -D [<decoy_ip_1>...<decoy_ip_N>,<my_ip>] <target>
+
+
+
+# **Scripts**
+------------
+
+	Scripts: --script=<scripts> 	
+	- Nmap scripts sequence to run
 	
-	Top Ports: --top-port <Count>
+	Default: -sC or --script=default 	
+	- run default scripts
 	
-	Consecutive order: -r
-	- Scan ports in consecutive order.
-	
-	 Open Ports: --open
-	
-	Speed: -T<0-5>
-	- T0 being the slowest and T5 the fastest.
-	
-	Network interface: -e wlan0
-	- Choosing network interface.
-	
-	Disable ping scan: -Pn
-	- Disabling ping scan.
+	Script Arguments: --script-args <arguments>
 	
 
 
