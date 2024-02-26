@@ -1,4 +1,4 @@
-###### Tool for enumerating Windows and Samba information from remote systems.
+##### Tool for enumerating Windows and Samba information from remote systems.
 # Main Arguments
 ---------------------------
 
