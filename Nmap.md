@@ -1,5 +1,5 @@
 # Nmap
-##### Network exploration tool and security/port scanner.
+##### Nmap is an open source tool for network discovery and security auditing. It's a command-line utility that scans Network, Hosts, Ports, and also detects installed running applications. Nmap helps pentesters to identify its targets, their available ports and services and search for vulnerabilities.
 
 states(Open, Closed, Filtered, Unfiltered, Open|Filtered, Closed|Filtered)
 
