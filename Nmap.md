@@ -1,7 +1,9 @@
 ###### Network exploration tool and security/port scanner.
 
 states(Open, Closed, Filtered, Unfiltered, Open|Filtered, Closed|Filtered)
+
 flags(URG, ACK, PSH, RST, SYN, FIN)	
+
 location of scripts: `/usr/share/nmap/scripts/`
 
 # **Host Discovery**
