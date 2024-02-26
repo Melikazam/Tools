@@ -1,4 +1,4 @@
-###### Network exploration tool and security/port scanner.
+##### Network exploration tool and security/port scanner.
 
 states(Open, Closed, Filtered, Unfiltered, Open|Filtered, Closed|Filtered)
 
